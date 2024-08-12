@@ -21,10 +21,19 @@ form.addEventListener("submit", (e) => {
 
   // Checking the Answers
   userAnswers.forEach((answer, index) => {
-    if(answer === correctAnswers[index]) {
-        score += 10;
+    const correctAnswer = correctAnswers[index];
+    const label = form.querySelector(
+      `input[name="option${index + 1}"][value="${correctAnswer}"]`
+    ).nextElementSibling;
+
+    if (answer === correctAnswer) {
+      score += 10;
+    } else {
+      // If the answer is wrong, underline the correct answer with a red border
+      label.classList.add("correct-answer");
     }
   });
+
   // show result on page
   scrollTo(0, 0);
 
