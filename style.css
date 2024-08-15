@@ -13,3 +13,6 @@ body {
 .correct-answer {
     border-bottom: 4px solid red;
   }
+  input {
+    cursor: pointer;
+  }
