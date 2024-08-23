@@ -6,6 +6,7 @@ body {
     width: 60%;
     margin: 0 auto;
 }
+
 .size {
     font-size: 34px;
 }
@@ -20,3 +21,10 @@ body {
   input {
     cursor: pointer;
   }
+
+  /* Media query for mobile screens */
+@media (min-width: 900px) {
+    .main-container {
+        width: 90%;
+    }
+}
